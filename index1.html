@@ -1,6 +1,4 @@
-
-
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -30,7 +28,6 @@
         {"destination":"Home","coords":[19.457124, 72.811880]},
         {"destination":"Australia","coords":[-25.047944, 134.003347]}
 		];
-
 	function initMap() {
 		map = new google.maps.Map(document.getElementById('map'), {
 			zoom: 4,
@@ -38,9 +35,8 @@
 			mapTypeId: 'terrain'
 		});
 
-		mashParks(parks);
+		mashParks(destination);
 	}
-
 	function mashParks(results) {
 	for (var i = 0; i < results.length; i++) {
 		var coords = results[i].coords;
@@ -48,12 +44,10 @@
 		var marker = new google.maps.Marker({
 			position: latLng,
 			map: map,
-			label:results[i].park
+			label:results[i].destination
 			});
 		}
 	}
-
-
 
 </script>
 <script async defer
